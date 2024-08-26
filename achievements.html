@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="stylesheet" href="achievements.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="notification-icon" id="notificationIcon">
+                <span class="alarm-icon">&#9888;</span>
+            </div>
+            <div class="notification-icon" id="requestsSentIcon">
+                <span class="requests-sent-icon">&#10003;</span>
+            </div>
+            <div class="notification-icon" id="requestsReceivedIcon">
+                <span class="requests-received-icon">&#128276;</span>
+            </div>
+        </div>
+        <div class="achievements-box">
+            <h2>Achievements</h2>
+            <table>
+                <tr>
+                    <th>Interest</th>
+                    <th>Board Percentage</th>
+                    <th>CG</th>
+                </tr>
+                <tr>
+                    <td id="interest"></td>
+                    <td id="boardPercentage"></td>
+                    <td id="cg"></td>
+                </tr>
+            </table>
+            <a href="login.html" class="btn">Logout</a>
+        </div>
+    </div>
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Send Request</h2>
+            <input type="email" id="searchEmail" placeholder="Enter email to search" />
+            <button id="sendRequestBtn" class="btn">Send Request</button>
+            <p id="notificationMessage"></p>
+        </div>
+    </div>
+    <div id="requestsReceivedModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="requestsReceivedCloseBtn">&times;</span>
+            <h2>Requests Received</h2>
+            <div id="requestsList"></div>
+        </div>
+    </div>
+    <script src="achievements.js"></script>
+</body>
+</html>
